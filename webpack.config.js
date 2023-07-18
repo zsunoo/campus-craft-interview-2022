@@ -12,7 +12,9 @@ module.exports = {
   ],
   devtool: "inline-source-map",
   devServer: {
-    contentBase: "./dist",
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
   },
   output: {
     filename: "[name].bundle.js",
